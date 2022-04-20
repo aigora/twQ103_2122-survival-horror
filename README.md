@@ -1,5 +1,5 @@
 # Survival horror
-El usuario se halla en un lugar abandonado de noche, el objetivo el jugador es llegar vivo al día siguiente  
+El usuario se halla en un lugar abandonado de noche, el objetivo el jugador es llegar vivo al día siguiente, consiguiendo por el camino puntos con los que más tarde podrá comprar pistas.  
 
 ## Integrantes del equipo
 
