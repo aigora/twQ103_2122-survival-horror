@@ -3,7 +3,7 @@ El usuario se halla en un lugar abandonado de noche, el objetivo el jugador es l
 
 ## Integrantes del equipo
 
-Miriam Esteban Bruña (miriam-estebanb)
+Miriam Esteban Bruña (miriam-estebanb) Marcos Castro Gómez (Marcoscg6)
 
 ## Objetivos del trabajo
 Habrá diferentes lugares abandonados en función del nivel que se escoja y en cada nivel se podrá elegir un rango de jugadores  distinto. 
