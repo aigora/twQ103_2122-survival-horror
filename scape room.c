@@ -2,7 +2,7 @@
 #include<string.h>
 #define MAX_JUG 100
 
-//Cada jugador puede jugar con hasta x personajes en función del nivel que se juegue
+//Cada jugador puede jugar con hasta x personajes en funciÃ³n del nivel que se juegue
 struct TPersonaje{
 	char  nombrepers[20];
 	char contrasenna[10];         
@@ -31,7 +31,7 @@ char menu(){
 	printf("Survival Horror-Un juego para los mas valientes\n Bienvenido al menu de opciones:\n");
 	printf("Introduce la opcion que desees:\n");
 	printf("************************\n");
-	printf("I-iniciar sesión para una nueva partida\n");
+	printf("I-iniciar sesiÃ³n para una nueva partida\n");
 	printf("R-Registrarse\n");
 	printf("X-Intrucciones del juego\n");
 	printf("S-Salir del juego\n");
@@ -53,7 +53,7 @@ int main(){
 	FILE*pfichero;
 	
 	do{
-		opcion=menu(); //Se llama ala función menú
+		opcion=menu(); //Se llama ala funciÃ³n menÃº
 		
 		switch (opcion){
 			
@@ -83,13 +83,13 @@ int main(){
 						
 					
 						
-						//SE piden los datos de inicio de sesión al jugador
+						//SE piden los datos de inicio de sesiÃ³n al jugador
 						
 						do{
 							printf("Introduzca su nickname de jugador de SURVIVAL HORROR:\n");
 							fflush(stdin);
 							scanf("%s",inicioNombrejug);
-							printf("Introduzca su contraseña:\n");
+							printf("Introduzca su contraseÃ±a:\n");
 							fflush(stdin);
 							scanf("%s",inicioContrasenna);
 							
@@ -109,7 +109,83 @@ int main(){
 								printf("Usuario y/o contrasenna no validos\n");
 							}
 							
-						}while(repetido==0); //Pregunta hasta que encuentra un usuario y contraseña ya existentes
+						}while(repetido==0); //Pregunta hasta que encuentra un usuario y contraseÃ±a ya existentes
+						
+			case 'R': printf("Debes crear un nuevo usuario de jugador, siguiendo las instrucciones:\n");
+			                
+			         //Abrimos el fichero nuevamente
+			         pfichero=fopen("usuarios.txt","r");//En modo lectura para ver los usuarios ya existentes
+			         //Comprobamos que existe el fichero
+			         if(pfichero==NULL){
+			         	printf("ERROR EN LA LECTURA DEL FICHERO");
+			         	return 0;
+					}
+					 
+					 	//Se comprueban los personajes existentes en el fichero
+						i=0, contador=0;
+						while(fscanf(pfichero,"%s %s %d", jugadores[i].nombrejug, jugadores[i].contrasenna, &jugadores[i].survivalcoins)!=EOF){
+							i++;
+							contador++;
+						} 
+						
+						printf("Ya existen %d jugadores\n", contador);
+						
+						//Por ultimo procedemos a cerrar el fichero
+						fclose(pfichero);
+						
+						//Se procede a pedir los datos al nuevo jugador y se compruba que no coincida con ninguno ya existente
+						
+						do{
+							printf("Introduxcs el nickname del nuevo jugador:\n");
+							fflush(stdin);
+							scanf("%s",inicioNombrejug);
+							for(i=0;i<contador;i++){
+								if(strcmp(inicioNombrejug,jugadores[i].nombrejug)==0){
+									repetido=1;
+									break;
+								} else {
+									repetido=0;
+								} 
+							}
+							
+							if(repetido==1){
+								printf("Lo sentimos ese nombre de jugador ya ha sido utilizado, prueba de nuevo\n");
+							} else {
+								printf("Nombre de jugador aceptado\n");
+								strcpy(jugadores[contador].nombrejug,inicioNombrejug);
+							}
+						} while(repetido==1);
+						
+						printf("Introduzca su contrasenna para su inicio de sesion");
+						fflush(stdin);
+						scanf("%s",jugadores[contador].contrasenna);
+						jugadores[contador].survivalcoins=0;
+						
+						for(i=0;i<=contador;i++){
+							printf("%s %s %d\n",jugadores[i].nombrejug,jugadores[i].contrasenna,jugadores[i].survivalcoins);
+						}
+						
+						//Ahora se abre el fichero en modo escritura para guardar los datos del nuevo jugador
+						
+						pfichero=fopen("usuarios.txt","w");
+						
+						if(pfichero==NULL){
+							printf("ERROR EN LA ESCRITURA DEL FICHERO");
+							return 0;
+						}
+						
+						for(i=0; i<=contador; i++){
+							fprintf(pfichero,"%s %s %d\n",jugadores[i].nombrejug,jugadores[i].contrasenna,jugadores[i].survivalcoins);
+						}
+						
+						//Cerramos el fichero utilizado
+					    fclose(pfichero);
+					    system("PAUSE");
+					    break;
+					 
+					 
+				
+				         
 						
 						
 						
