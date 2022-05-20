@@ -1,0 +1,55 @@
+	case 'c':printf("INSTRUCCIONES:\n");
+			
+				Instrucciones(&ins);
+			
+				break;
+
+	int ins;
+
+
+
+
+
+
+
+
+void Instrucciones(int ins){
+	
+	printf("SURVIVAL HORROR es un juego de preguntas donde el jugador se encarna en un grupo de amigos que quedan separados y deben ir avanzando a traves de diferentes caminos para poder lograr reencontrarse.\n La historia se divide en dos partes diferenciadas.\n\n");
+	printf("La primera parte es Cultura general, en ella el jugador tratara de ganar puntos acertando preguntas que le serviran mas adelante.\n En la segunda parte del juego llamada Supervivencia el jugador debera enfrentarse a otro tipo de preguntas donde acertar o fallar consume los puntos de vida de dicho personaje. \n Los puntos ganados en Cultura General sirven para generar pistas en caso de necesitarlos y solo pueden ser usados en Supervivencia.\n El objetivo del juego es conseguir responder todas las preguntas y no perder todos los puntos de vida en el camino.\n")
+	
+	printf("Para acceder al juego es necesario crear un archivo .txt llamado "" en la carpeta del programa\n");
+					
+	do{
+		printf("Puede saber mas acerca del juego indicando una de las siguientes opciones:\n");
+		
+		printf("--------------------------------------------------------------------------\n");
+		
+		printf("1-Cultura General\n");
+		
+		printf("2-Supervivencia\n");
+		
+		printf("3-Volver al Menu\n");
+		
+		//fflush(stdin);
+		
+		scanf("%d",&ins);
+					
+		if(ins=='1'){
+			printf("Cultura General\n");
+			
+			printf("Las preguntas referidas a cultura general, como indica su nombre son preguntas de todo ambito.\n Cada pregunta acertada otorgara al jugador Survival Coins que podran ser gastadas posteriormente en pistas para la segunda parte del juego.\n");
+			
+		}else if(ins=='2'){
+			printf("Supervivencia\n");
+			
+			printf("En Supervivencia el jugador empieza el juego con 50 puntos de vida que iran disminuyendo a medida que se fallen las preguntas.\n");
+			
+		}else if(ins=='3'){
+			break; 
+			
+		}else{
+			printf("Por favor, eliga una de las opciones validas\n");
+		}			
+}
+		
