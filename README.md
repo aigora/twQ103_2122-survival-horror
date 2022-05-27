@@ -1,13 +1,15 @@
 # Survival horror
-El usuario se halla en un lugar abandonado de noche, el objetivo el jugador es llegar vivo al día siguiente, consiguiendo por el camino puntos con los que más tarde podrá comprar pistas.  
+En este juego eres un alumno del Grado de Historia en la Universidad Complutense de Madrid, y estás preparando tu TFG: <<La España vaciada. Mitos y leyendas y su relación con la despoblación>>. Para finalizar el TFG has decidido viajar a uno de los llamados pueblos fantasma de España, Belchite, en Zaragoza.  Al inicio de la partida conocerás a Carlos, la última persona que habitó la casa en la que te has metido, él te acompañará a lo largo de tu aventura.  
 
 ## Integrantes del equipo
 
-Miriam Esteban Bruña (miriam-estebanb) Marcos Castro Gómez (Marcoscg6) Héctor Domínguez Mora (heeeectorito)
-
+Miriam Esteban Bruña (miriam-estebanb) 
+Marcos Castro Gómez (Marcoscg6) 
+Héctor Domínguez Mora (heeeectorito)
 
 
 ## Objetivos del trabajo
-Habrá diferentes lugares abandonados en función del nivel que se escoja y en cada nivel se podrá elegir un rango de jugadores  distinto. 
-En función del tiempo (número de decisiones) que hayan sobrevivido los jugadores, la cantidad de jugadores con los que se empiece y se acabe, así como los puntos que se haya conseguido y las pistas que se hayan comprado, se realizará un ranking de los mejores jugadores en los diferentes niveles.
+El jugador podrá crear un usuario, que se guardará en el fichero. Podrá acceder tantas veces como quiera con su contraseña.
+El jugador irá tomando decisiones y en un momento dado podrá conseguir survivalcoins, las monedas del juego, con las que podrá rehacer decisiones de las que se arrepienta.
+En función de las decisiones que tome, podrá ganar o perder vida y, en caso de que se quede sin vida (el personaje o los dos en caso de que juegue con dos), el programa terminará.  
 
