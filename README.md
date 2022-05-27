@@ -1,5 +1,6 @@
 # Survival horror
 En este juego eres un alumno del Grado de Historia en la Universidad Complutense de Madrid, y estás preparando tu TFG: <<La España vaciada. Mitos y leyendas y su relación con la despoblación>>. Para finalizar el TFG has decidido viajar a uno de los llamados pueblos fantasma de España, Belchite, en Zaragoza.  Al inicio de la partida conocerás a Carlos, la última persona que habitó la casa en la que te has metido, él te acompañará a lo largo de tu aventura.  
+Observación: el juego se debe jugar en pantalla completa y con volumen.
 
 ## Integrantes del equipo
 
