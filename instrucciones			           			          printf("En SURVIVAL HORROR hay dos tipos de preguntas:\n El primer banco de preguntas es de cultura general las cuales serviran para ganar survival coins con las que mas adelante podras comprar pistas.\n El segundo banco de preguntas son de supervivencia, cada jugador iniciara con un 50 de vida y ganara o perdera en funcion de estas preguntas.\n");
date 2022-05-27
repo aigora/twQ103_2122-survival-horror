@@ -1,4 +1,0 @@
-printf("Instrucciones:\n");
-			          
-			          printf("En SURVIVAL HORROR hay dos tipos de preguntas:\n El primer banco de preguntas es de cultura general las cuales serviran para ganar survival coins con las que mas adelante podras comprar pistas.\n El segundo banco de preguntas son de supervivencia, cada jugador iniciara con un 50 de vida y ganara o perdera en funcion de estas preguntas.\n");
-					 
