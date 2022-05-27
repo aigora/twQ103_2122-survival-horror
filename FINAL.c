@@ -3,7 +3,7 @@
 #include<locale.h>
 #define MAX_JUG 100
 
-//Cada jugador puede jugar con hasta x personajes en función del nivel que se juegue
+//Cada jugador puede jugar con hasta x personajes en funciÃ³n del nivel que se juegue
 struct TPersonaje{
 	char  nombrepers[20];
 	char contrasenna[10];         
@@ -34,7 +34,7 @@ int main(){
 	FILE*pfichero;
 
 	do{
-		opcion=menu(); //Se llama ala función menú
+		opcion=menu(); //Se llama ala funciÃ³n menÃº
 		
 		switch (opcion){
 			
@@ -64,13 +64,13 @@ int main(){
 						
 					
 						
-						//SE piden los datos de inicio de sesión al jugador
+						//SE piden los datos de inicio de sesiÃ³n al jugador
 						
 						do{
 							printf("Introduzca su nickname de jugador de SURVIVAL HORROR:\n");
 							fflush(stdin);
 							scanf("%s",inicioNombrejug);
-							printf("Introduzca su contraseña:\n");
+							printf("Introduzca su contraseÃ±a:\n");
 							fflush(stdin);
 							scanf("%s",inicioContrasenna);
 							
@@ -90,7 +90,7 @@ int main(){
 								printf("Usuario y/o contrasenna no validos\n");
 							}
 							
-						}while(repetido==0); //Pregunta hasta que encuentra un usuario y contraseña ya existentes
+						}while(repetido==0); //Pregunta hasta que encuentra un usuario y contraseÃ±a ya existentes
 						break;
 			case 'R': cartelRegistrarse();
 				  printf("\nDebes crear un nuevo usuario de jugador, siguiendo las instrucciones:\n");
@@ -185,11 +185,11 @@ int main(){
 		struct TPersonaje pers1,pers2;
 		
 		
-		//Bucle para que no de 0 personajes, números negativos o más de 4
+		//Bucle para que no de 0 personajes, nÃºmeros negativos o mÃ¡s de 4
 		do
 		{
-			//Pregunta con cuántos personajes quiere jugar
-			printf("Introduce el número de personajes (máximo 2):\n");
+			//Pregunta con cuÃ¡ntos personajes quiere jugar
+			printf("Introduce el nÃºmero de personajes (mÃ¡ximo 2):\n");
 			scanf("%i",&numeropers);
 			fflush(stdin);
 		}while(numeropers<=0 || numeropers>2);
@@ -209,12 +209,12 @@ int main(){
 			pers2.survivalcoins=0;
 		}
 		
-		printf("\n\007¡Buenos días, %s ! Como recordarás, eres un alumno del Grado de Historia en la Universidad Complutense de Madrid, y estás preparando tu TFG: <<La España vaciada. Mitos y leyendas y su relación con la despoblación>>. Para finalizar el TFG has decidido viajar a uno de los llamados pueblos fantasma de España, Belchite, en Zaragoza.\n\n",pers1.nombrepers);
+		printf("\n\007Â¡Buenos dÃ­as, %s ! Como recordarÃ¡s, eres un alumno del Grado de Historia en la Universidad Complutense de Madrid, y estÃ¡s preparando tu TFG: <<La EspaÃ±a vaciada. Mitos y leyendas y su relaciÃ³n con la\n despoblaciÃ³n>>. Para finalizar el TFG has decidido viajar a uno de los llamados pueblos fantasma de EspaÃ±a, Belchite, en Zaragoza.\n\n",pers1.nombrepers);
 		system("PAUSE");
 		if(numeropers==1)
 		{
 		
-		printf("\n\007¡Por fin alguien me ve! Soy Carlos, la última persona que habitó esta casa, si quieres salir de aquí, tendrás que demostrar tu ingenio tomando buenas decisiones según se te planteen. En caso de que tomes muchas malas decisiones, esta casa se encargará de matarte.\n");
+		printf("\n\007Â¡Por fin alguien me ve! Soy Carlos, la Ãºltima persona que habitÃ³ esta casa, si quieres salir de aquÃ­, tendrÃ¡s que demostrar tu ingenio tomando buenas decisiones segÃºn se te planteen. En caso de que tomes muchas malas decisiones, esta casa se encargarÃ¡ de matarte.\n");
 		system("PAUSE");
 		
 			//PREGUNTA 1
@@ -235,7 +235,7 @@ int main(){
 					printf("Has conseguido %d survivalcoins.\n",pers1.survivalcoins);
 				} else
 				{
-					printf("No sé yo si igual te habría venido bien leerla.\n");
+					printf("No sÃ© yo si igual te habrÃ­a venido bien leerla.\n");
 				}
 				
 				resp1++;
@@ -249,18 +249,18 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers1.nombrepers);
-					printf("A continuación, ¿qué quieres hacer?\na. Coger el reloj que hay en la pared para tener una referencia horaria.\nb. Buscar un mechero.\nc. Buscar comida.\n");
+					printf("A continuaciÃ³n, Â¿quÃ© quieres hacer?\na. Coger el reloj que hay en la pared para tener una referencia horaria.\nb. Buscar un mechero.\nc. Buscar comida.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta1[resp1]);
 				}while(respuesta1[resp1]!='a' && respuesta1[resp1]!='b' && respuesta1[resp1]!='c');
 				
 				if(respuesta1[resp1]=='a')
 				{
-					printf("¡Vaya! El reloj no funciona, pero al cogerlo, ha caído una nota <<C+A <3>>, ¡no me digas que los amores adolescentes no te dan vida!\n");
+					printf("Â¡Vaya! El reloj no funciona, pero al cogerlo, ha caÃ­do una nota <<C+A <3>>, Â¡no me digas que los amores adolescentes no te dan vida!\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 				} else
 				{
-					printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+					printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 				}
 				system("PAUSE");
@@ -268,22 +268,22 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='a')
 									{
-										printf("¡Vaya! El reloj no funciona, pero al cogerlo, ha caído una nota <<C+A <3>>, ¡no me digas que los amores adolescentes no te dan vida!\n");
+										printf("Â¡Vaya! El reloj no funciona, pero al cogerlo, ha caÃ­do una nota <<C+A <3>>, Â¡no me digas que los amores adolescentes no te dan vida!\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 									}else if(respuesta1[resp1]=='b'||respuesta1[resp1]=='c')
 									{
-										printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+										printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 									}
 									pers1.survivalcoins-=100;
@@ -322,11 +322,11 @@ int main(){
 				
 				if(respuesta1[resp1]=='a')
 				{
-					printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+					printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 				} else
 				{
-					printf("La puerta está cerrada con clave, ya sabes.\n");
+					printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 				}
 				system("PAUSE");
@@ -334,22 +334,22 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='b')
 									{
-										printf("La puerta está cerrada con clave, ya sabes.\n");
+										printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 									}else if(respuesta1[resp1]=='a')
 									{
-										printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+										printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 									}
 									pers1.survivalcoins-=100;
@@ -388,11 +388,11 @@ int main(){
 				
 				if(respuesta1[resp1]=='a')
 				{
-					printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero está cerrada. Mueres trágicamente.\n");
+					printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero estÃ¡ cerrada. Mueres trÃ¡gicamente.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida-pers1.vida);
 				} else
 				{
-					printf("La puerta está cerrada con clave, ya sabes.\n");
+					printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 				}
 				system("PAUSE");
@@ -400,22 +400,22 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='a')
 									{
-										printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero está cerrada. Mueres trágicamente.\n");
+										printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero estÃ¡ cerrada. Mueres trÃ¡gicamente.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida-pers1.vida);
 									}else if(respuesta1[resp1]=='b')
 									{
-										printf("La puerta está cerrada con clave, ya sabes.\n");
+										printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 									}
 									pers1.survivalcoins-=100;
@@ -447,7 +447,7 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers1.nombrepers);
-					printf("\n¿Cómo quieres abrir la puerta? \na. Esta casa está destartalada, con dos patadas la puerta está abajo.\nb. Buscar alguna pista para conseguir el código.\n");
+					printf("\nÂ¿CÃ³mo quieres abrir la puerta? \na. Esta casa estÃ¡ destartalada, con dos patadas la puerta estÃ¡ abajo.\nb. Buscar alguna pista para conseguir el cÃ³digo.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta1[resp1]);
 				}while(respuesta1[resp1]!='a' && respuesta1[resp1]!='b');
@@ -462,7 +462,7 @@ int main(){
 						printf("Has muerto.\n");
 					}else
 					{
-						printf("La puerta está cerrada con clave, ya sabes.\n");
+						printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 					}
 				} else
 				{
@@ -473,13 +473,13 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='a')
@@ -489,7 +489,7 @@ int main(){
 											printf("Has muerto.\n");
 										}else
 										{
-											printf("La puerta está cerrada con clave, ya sabes.\n");
+											printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 										}
 									}else if(respuesta1[resp1]=='b')
 									{
@@ -522,7 +522,7 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers1.nombrepers);
-					printf("\nDespués de estar buscando, has encontrado 6 ideas, tienes 3 oportunidades:\n1. La hora del reloj\n2. La fecha de la nota de detrás del reloj.\n3. El número que hay pintado en el cuadro que hay colgado.\n4. Los números que están arrancados del microondas.\n5. Los números que no están arrancados del microondas.\n6. La fecha que está señalada en el calendario.\n");
+					printf("\nDespuÃ©s de estar buscando, has encontrado 6 ideas, tienes 3 oportunidades:\n1. La hora del reloj\n2. La fecha de la nota de detrÃ¡s del reloj.\n3. El nÃºmero que hay pintado en el cuadro que hay colgado.\n4. Los nÃºmeros que estÃ¡n arrancados del microondas.\n5. Los nÃºmeros que no estÃ¡n arrancados del microondas.\n6. La fecha que estÃ¡ seÃ±alada en el calendario.\n");
 					fflush(stdin);
 					scanf("%d",&codigo);
 					oport++;
@@ -530,11 +530,11 @@ int main(){
 				
 				if(codigo==2)
 				{
-					printf("Efectivamente la fecha en la que Alicia y yo nos conocimos era el código, lo puse porque desde el momento en el que nos vimos supe que jamás se me olvidaría ese día, fuimos tan felices...\nEn fin, que me pongo melancólico, ¡por fin has salido de la cocina! Ahora dirígete a la puerta principal, ya es hora de terminar el TFG.\n\n- FIN -\n");
+					printf("Efectivamente la fecha en la que Alicia y yo nos conocimos era el cÃ³digo, lo puse porque desde el momento en el que nos vimos supe que jamÃ¡s se me olvidarÃ­a ese dÃ­a, fuimos tan felices...\nEn fin, que me pongo melancÃ³lico, Â¡por fin has salido de la cocina! Ahora dirÃ­gete a la puerta principal, ya es hora de terminar el TFG.\n\n- FIN -\n");
 					return 0;
 				} else
 				{
-					printf("Ya quedaba poco, supongo que la presión te ha podido, has muerto.\n\n");
+					printf("Ya quedaba poco, supongo que la presiÃ³n te ha podido, has muerto.\n\n");
 					pers1.vida=0;
 					return 0;
 				}
@@ -542,7 +542,7 @@ int main(){
 			}
 		}else if(numeropers>1)
 		{
-			printf("\n\007¡Por fin alguien me ve! Soy Carlos, la última persona que habitó esta casa, si quieres salir de aquí, tendrás que demostrar tu ingenio tomando buenas decisiones según se te planteen. En caso de que tomes muchas malas decisiones, esta casa se encargará de matarte.\n");
+			printf("\n\007Â¡Por fin alguien me ve! Soy Carlos, la Ãºltima persona que habitÃ³ esta casa, si quieres salir de aquÃ­, tendrÃ¡s que demostrar tu ingenio tomando buenas decisiones segÃºn se te planteen. En caso de que tomes muchas malas decisiones, esta casa se encargarÃ¡ de matarte.\n");
 			system("PAUSE");
 			
 			//PREGUNTA 1
@@ -564,7 +564,7 @@ int main(){
 					
 				} else
 				{
-					printf("No sé yo si igual te habría venido bien leerla.\n");
+					printf("No sÃ© yo si igual te habrÃ­a venido bien leerla.\n");
 				}
 				
 				resp1++;
@@ -577,19 +577,19 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers2.nombrepers);
-					printf("\nTe encuentras en lo que parece ser una buhardilla, ¿qué quieres hacer?\na. Hacerte con el matainsectos y echarlo por la buhardilla.\nb. Limpiar la buhardilla en busca de una llave.\n");
+					printf("\nTe encuentras en lo que parece ser una buhardilla, Â¿quÃ© quieres hacer?\na. Hacerte con el matainsectos y echarlo por la buhardilla.\nb. Limpiar la buhardilla en busca de una llave.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta2[resp2]);
 				}while(respuesta2[resp2]!='a' && respuesta2[resp2]!='b');
 				
 				if(respuesta2[resp2]=='a')
 				{
-					printf("El matainsectos es tóxico y te está provocando un mareo, sin embargo, te lo guardas por lo que pudiera pasar en adelante.\n");
+					printf("El matainsectos es tÃ³xico y te estÃ¡ provocando un mareo, sin embargo, te lo guardas por lo que pudiera pasar en adelante.\n");
 					printf("Te quedan %d puntos de vida\n",pers2.vida-10);
 					
 				} else
 				{
-					printf("No has encontrado una llave, pero sí has perdido tiempo y energía.  Ahora te encuentras algo mareado\n");
+					printf("No has encontrado una llave, pero sÃ­ has perdido tiempo y energÃ­a.  Ahora te encuentras algo mareado\n");
 					printf("Te quedan %d puntos de vida\n",pers2.vida-15);
 				}
 				system("PAUSE");
@@ -597,22 +597,22 @@ int main(){
 				{
 				do
 				{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No");
 					fflush(stdin);
 					scanf("%c",&ret);
 				}while (ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta2[resp2]);
 									if(respuesta2[resp2]=='a')
 									{
-										printf("El matainsectos es tóxico y te está provocando un mareo, sin embargo, te lo guardas por lo que pudiera pasar en adelante.\n");
+										printf("El matainsectos es tÃ³xico y te estÃ¡ provocando un mareo, sin embargo, te lo guardas por lo que pudiera pasar en adelante.\n");
 										printf("Te quedan %d puntos de vida\n",pers2.vida-10);
 									}else if(respuesta2[resp2]=='b')
 									{
-										printf("No has encontrado una llave, pero sí has perdido tiempo y energía.  Ahora te encuentras algo mareado\n");
+										printf("No has encontrado una llave, pero sÃ­ has perdido tiempo y energÃ­a.  Ahora te encuentras algo mareado\n");
 										printf("Te quedan %d puntos de vida\n",pers2.vida-15);
 									}
 									pers1.survivalcoins-=100;
@@ -643,18 +643,18 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers1.nombrepers);
-					printf("A continuación, ¿qué quieres hacer?\na. Coger el reloj que hay en la pared para tener una referencia horaria.\nb. Buscar un mechero.\nc. Buscar comida.\n");
+					printf("A continuaciÃ³n, Â¿quÃ© quieres hacer?\na. Coger el reloj que hay en la pared para tener una referencia horaria.\nb. Buscar un mechero.\nc. Buscar comida.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta1[resp1]);
 				}while(respuesta1[resp1]!='a' && respuesta1[resp1]!='b' && respuesta1[resp1]!='c');
 				
 				if(respuesta1[resp1]=='a')
 				{
-					printf("¡Vaya! El reloj no funciona, pero al cogerlo, ha caído una nota <<C+A <3>>, ¡no me digas que los amores adolescentes no te dan vida!\n");
+					printf("Â¡Vaya! El reloj no funciona, pero al cogerlo, ha caÃ­do una nota <<C+A <3>>, Â¡no me digas que los amores adolescentes no te dan vida!\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 				} else
 				{
-					printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+					printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 				}
 				system("PAUSE");
@@ -662,22 +662,22 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='a')
 									{
-										printf("¡Vaya! El reloj no funciona, pero al cogerlo, ha caído una nota <<C+A <3>>, ¡no me digas que los amores adolescentes no te dan vida!\n");
+										printf("Â¡Vaya! El reloj no funciona, pero al cogerlo, ha caÃ­do una nota <<C+A <3>>, Â¡no me digas que los amores adolescentes no te dan vida!\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 									}else if(respuesta1[resp1]=='b'||respuesta1[resp1]=='c')
 									{
-										printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+										printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 									}
 									pers1.survivalcoins-=100;
@@ -709,7 +709,7 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers2.nombrepers);
-					printf("\nPara aliviar el mareo, ¿qué prefieres hacer?\na. Abrir la puerta de la buhardilla y salir.\nb. Abrir la ventana y salir al balconcillo.\n");
+					printf("\nPara aliviar el mareo, Â¿quÃ© prefieres hacer?\na. Abrir la puerta de la buhardilla y salir.\nb. Abrir la ventana y salir al balconcillo.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta2[resp2]);
 				}while(respuesta2[resp2]!='a' && respuesta2[resp2]!='b');
@@ -721,7 +721,7 @@ int main(){
 					
 				} else
 				{
-					printf("Este aire te está sentando genial.\n");
+					printf("Este aire te estÃ¡ sentando genial.\n");
 					printf("Te quedan %d puntos de vida\n",pers2.vida+10);
 				}
 				system("PAUSE");
@@ -729,13 +729,13 @@ int main(){
 				{
 				do
 				{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No");
 					fflush(stdin);
 					scanf("%c",&ret);
 				}while (ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta2[resp2]);
 									if(respuesta2[resp2]=='a')
@@ -744,7 +744,7 @@ int main(){
 										printf("Te quedan %d puntos de vida\n",pers2.vida-5);
 									}else if(respuesta2[resp2]=='b')
 									{
-										printf("Este aire te está sentando genial.\n");
+										printf("Este aire te estÃ¡ sentando genial.\n");
 										printf("Te quedan %d puntos de vida\n",pers2.vida+10);
 									}
 									pers1.survivalcoins-=100;
@@ -781,11 +781,11 @@ int main(){
 				
 				if(respuesta1[resp1]=='a')
 				{
-					printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+					printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 				} else
 				{
-					printf("La puerta está cerrada con clave, ya sabes.\n");
+					printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 				}
 				system("PAUSE");
@@ -793,22 +793,22 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='b')
 									{
-										printf("La puerta está cerrada con clave, ya sabes.\n");
+										printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 									}else if(respuesta1[resp1]=='a')
 									{
-										printf("¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
+										printf("Â¡Has encontrado un mechero! Igual te es de utilidad, de momento te has quemado.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida-10);
 									}
 									pers1.survivalcoins-=100;
@@ -840,19 +840,19 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers2.nombrepers);
-					printf("\nYa estás mejor, te recompones y:\na. Vas al baño a mojarte la cara.\nb. Bajas las escaleras hacia la planta baja.\n");
+					printf("\nYa estÃ¡s mejor, te recompones y:\na. Vas al baÃ±o a mojarte la cara.\nb. Bajas las escaleras hacia la planta baja.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta2[resp2]);
 				}while(respuesta2[resp2]!='a' && respuesta2[resp2]!='b');
 				
 				if(respuesta2[resp2]=='a')
 				{
-					printf("¡Pff qué gustazo pasar por el baño!\n");
+					printf("Â¡Pff quÃ© gustazo pasar por el baÃ±o!\n");
 					printf("Te quedan %d puntos de vida\n",pers2.vida+5);
 					
 				} else
 				{
-					printf("Buena elección puesto que la puerta está abajo.\n");
+					printf("Buena elecciÃ³n puesto que la puerta estÃ¡ abajo.\n");
 					printf("Te quedan %d puntos de vida\n",pers2.vida+5);
 				}
 				system("PAUSE");
@@ -860,22 +860,22 @@ int main(){
 				{
 				do
 				{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No");
 					fflush(stdin);
 					scanf("%c",&ret);
 				}while (ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta2[resp2]);
 									if(respuesta2[resp2]=='a')
 									{
-										printf("¡Pff qué gustazo pasar por el baño!\n");
+										printf("Â¡Pff quÃ© gustazo pasar por el baÃ±o!\n");
 										printf("Te quedan %d puntos de vida\n",pers2.vida+5);
 									}else if(respuesta2[resp2]=='b')
 									{
-										printf("Buena elección puesto que la puerta está abajo.\n");
+										printf("Buena elecciÃ³n puesto que la puerta estÃ¡ abajo.\n");
 										printf("Te quedan %d puntos de vida\n",pers2.vida+5);
 									}
 									pers1.survivalcoins-=100;
@@ -912,11 +912,11 @@ int main(){
 				
 				if(respuesta1[resp1]=='a')
 				{
-					printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero está cerrada. Mueres trágicamente.\n");
+					printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero estÃ¡ cerrada. Mueres trÃ¡gicamente.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida-pers1.vida);
 				} else
 				{
-					printf("La puerta está cerrada con clave, ya sabes.\n");
+					printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 					printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 				}
 				system("PAUSE");
@@ -924,22 +924,22 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='a')
 									{
-										printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero está cerrada. Mueres trágicamente.\n");
+										printf("El gas estaba abierto cuando has llegado, corres hacia la puerta, pero estÃ¡ cerrada. Mueres trÃ¡gicamente.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida-pers1.vida);
 									}else if(respuesta1[resp1]=='b')
 									{
-										printf("La puerta está cerrada con clave, ya sabes.\n");
+										printf("La puerta estÃ¡ cerrada con clave, ya sabes.\n");
 										printf("Te quedan %d puntos de vida\n",pers1.vida+5);
 									}
 									pers1.survivalcoins-=100;
@@ -970,28 +970,28 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers2.nombrepers);
-					printf("\nEstando en el baño observas que algo se mueve en la habitación de enfrente.\na. Vas a investigar.\nb. Bajas las escaleras.\n");
+					printf("\nEstando en el baÃ±o observas que algo se mueve en la habitaciÃ³n de enfrente.\na. Vas a investigar.\nb. Bajas las escaleras.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta2[resp2]);
 				}while(respuesta2[resp2]!='a' && respuesta2[resp2]!='b');
 				
 				if(respuesta2[resp2]=='a')
 				{
-					printf("Mi hijo siempre dijo que su muñeca le hablaba, yo pensé que era una cosa de niños, hasta que apareció muerto. Encuéntrala si pretendes seguir vivo. Tienes una oportunidad:\n1. Debajo de la cama.\n2. En el armario.\n3. En el alféizar de la ventana.\n4. Encima del armario.\n5. Detrás de la puerta.\n");
+					printf("Mi hijo siempre dijo que su muÃ±eca le hablaba, yo pensÃ© que era una cosa de niÃ±os, hasta que apareciÃ³ muerto. EncuÃ©ntrala si pretendes seguir vivo. Tienes una oportunidad:\n1. Debajo de la cama.\n2. En el armario.\n3. En el alfÃ©izar de la ventana.\n4. Encima del armario.\n5. DetrÃ¡s de la puerta.\n");
 					fflush(stdin);
 					scanf("%d",&muneca);
 					if(muneca==3)
 					{
-						printf("La coges y la tiras por la ventana. Ahora sí, bajas las escaleras. El susto no te sienta bien\n");
+						printf("La coges y la tiras por la ventana. Ahora sÃ­, bajas las escaleras. El susto no te sienta bien\n");
 						printf("Te quedan %d puntos de vida\n",pers2.vida-5);
 					}else
 					{
-						printf("Igual tendría que haber comentado esto antes, pero vaya que te advertí de que tomar malas decisiones harían que la casa te matase. Lo siento.\n");
+						printf("Igual tendrÃ­a que haber comentado esto antes, pero vaya que te advertÃ­ de que tomar malas decisiones harÃ­an que la casa te matase. Lo siento.\n");
 						printf("Te quedan %d puntos de vida\n",pers2.vida-pers2.vida);
 					}
 				} else
 				{
-					printf("Buena elección puesto que la puerta está abajo.\n");
+					printf("Buena elecciÃ³n puesto que la puerta estÃ¡ abajo.\n");
 					printf("Te quedan %d puntos de vida\n",pers2.vida+5);
 				}
 				system("PAUSE");
@@ -999,32 +999,32 @@ int main(){
 				{
 				do
 				{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No");
 					fflush(stdin);
 					scanf("%c",&ret);
 				}while (ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta2[resp2]);
 									if(respuesta2[resp2]=='a')
 									{
-										printf("Mi hijo siempre dijo que su muñeca le hablaba, yo pensé que era una cosa de niños, hasta que apareció muerto. Encuéntrala si pretendes seguir vivo. Tienes una oportunidad:\n1. Debajo de la cama.\n2. En el armario.\n3. En el alféizar de la ventana.\n4. Encima del armario.\n5. Detrás de la puerta.\n");
+										printf("Mi hijo siempre dijo que su muÃ±eca le hablaba, yo pensÃ© que era una cosa de niÃ±os, hasta que apareciÃ³ muerto. EncuÃ©ntrala si pretendes seguir vivo. Tienes una oportunidad:\n1. Debajo de la cama.\n2. En el armario.\n3. En el alfÃ©izar de la ventana.\n4. Encima del armario.\n5. DetrÃ¡s de la puerta.\n");
 										fflush(stdin);
 										scanf("%d",&muneca);
 										if(muneca==3)
 										{
-											printf("La coges y la tiras por la ventana. Ahora sí, bajas las escaleras. El susto no te sienta bien\n");
+											printf("La coges y la tiras por la ventana. Ahora sÃ­, bajas las escaleras. El susto no te sienta bien\n");
 											printf("Te quedan %d puntos de vida\n",pers2.vida-5);
 										}else
 										{
-											printf("Igual tendría que haber comentado esto antes, pero vaya que te advertí de que tomar malas decisiones harían que la casa te matase. Lo siento.\n");
+											printf("Igual tendrÃ­a que haber comentado esto antes, pero vaya que te advertÃ­ de que tomar malas decisiones harÃ­an que la casa te matase. Lo siento.\n");
 											printf("Te quedan %d puntos de vida\n",pers2.vida-pers2.vida);
 										}
 									}else if(respuesta2[resp2]=='b')
 									{
-										printf("Buena elección puesto que la puerta está abajo.\n");
+										printf("Buena elecciÃ³n puesto que la puerta estÃ¡ abajo.\n");
 										printf("Te quedan %d puntos de vida\n",pers2.vida+5);
 									}
 									pers1.survivalcoins-=100;
@@ -1058,7 +1058,7 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers1.nombrepers);
-					printf("\n¿Cómo quieres abrir la puerta? \na. Esta casa está destartalada, con dos patadas la puerta está abajo.\nb. Buscar alguna pista para conseguir el código.\n");
+					printf("\nÂ¿CÃ³mo quieres abrir la puerta? \na. Esta casa estÃ¡ destartalada, con dos patadas la puerta estÃ¡ abajo.\nb. Buscar alguna pista para conseguir el cÃ³digo.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta1[resp1]);
 				}while(respuesta1[resp1]!='a' && respuesta1[resp1]!='b');
@@ -1078,13 +1078,13 @@ int main(){
 				{
 					do
 					{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No\n");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No\n");
 					fflush(stdin);
 					scanf("%c",&ret);
 					}while(ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta1[resp1]);
 									if(respuesta1[resp1]=='a')
@@ -1120,23 +1120,23 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers2.nombrepers);
-					printf("\nEscuchas un ruido.\na. Vas hacia él.\nb. No vas hacia él.\n");
+					printf("\nEscuchas un ruido.\na. Vas hacia Ã©l.\nb. No vas hacia Ã©l.\n");
 					fflush(stdin);
 					scanf("%c",&respuesta2[resp2]);
 				}while(respuesta2[resp2]!='a' && respuesta2[resp2]!='b');
 				
 				if(respuesta2[resp2]=='a'&& respuesta1[5]=='a'&&cocina=='a')
 				{
-					printf("Genial, a partir de ahora iréis juntos.\n");
+					printf("Genial, a partir de ahora irÃ©is juntos.\n");
 					printf("A %s le quedan %d puntos de vida\nA %s le quedan %d puntos de vida",pers1.nombrepers,pers1.vida+5,pers2.nombrepers,pers2.vida+5);
 					
 				} else if(respuesta2[resp2]=='a'&& respuesta1[5]!='a'||respuesta2[resp2]=='a'&&cocina!='a')
 				{
-					printf("No será porque no te avisé de que esta casa te mataría.\n");
+					printf("No serÃ¡ porque no te avisÃ© de que esta casa te matarÃ­a.\n");
 					printf("%s, has muerto.\n", pers2.nombrepers);
 				} else if(respuesta2[resp2]=='b'&& respuesta1[5]=='a'&&cocina=='a')
 				{
-					printf("No será porque no te avisé de que esta casa te mataría.\n");
+					printf("No serÃ¡ porque no te avisÃ© de que esta casa te matarÃ­a.\n");
 					printf("%s, has muerto.\n", pers1.nombrepers);
 				} else
 				{
@@ -1148,27 +1148,27 @@ int main(){
 				{
 				do
 				{
-					printf("\nTienes survivalcoins suficientes para rehacer la decisión, ¿quieres hacerlo ahora?\na.Sí\nb.No");
+					printf("\nTienes survivalcoins suficientes para rehacer la decisiÃ³n, Â¿quieres hacerlo ahora?\na.SÃ­\nb.No");
 					fflush(stdin);
 					scanf("%c",&ret);
 				}while (ret!='a' && ret!='b');
 					switch(ret)
 					{
-						case 'a':	printf("Diga su nueva elección\n");
+						case 'a':	printf("Diga su nueva elecciÃ³n\n");
 									fflush(stdin);
 									scanf("%c",&respuesta2[resp2]);
 									if(respuesta2[resp2]=='a'&& respuesta1[5]=='a'&&cocina=='a')
 									{
-										printf("Genial, a partir de ahora iréis juntos.\n");
+										printf("Genial, a partir de ahora irÃ©is juntos.\n");
 										printf("A %s le quedan %d puntos de vida\nA %s le quedan %d puntos de vida",pers1.nombrepers,pers1.vida+5,pers2.nombrepers,pers2.vida+5);
 					
 									} else if(respuesta2[resp2]=='a'&& respuesta1[5]!='a'||respuesta2[resp2]=='a'&&cocina!='a')
 									{
-										printf("No será porque no te avisé de que esta casa te mataría.\n");
+										printf("No serÃ¡ porque no te avisÃ© de que esta casa te matarÃ­a.\n");
 										printf("%s, has muerto.\n", pers2.nombrepers);
 									} else if(respuesta2[resp2]=='b'&& respuesta1[5]=='a'&&cocina=='a')
 									{
-										printf("No será porque no te avisé de que esta casa te mataría.\n");
+										printf("No serÃ¡ porque no te avisÃ© de que esta casa te matarÃ­a.\n");
 										printf("%s, has muerto.\n",pers1.nombrepers);
 									} else if(pers1.vida!=0)
 									{
@@ -1176,7 +1176,7 @@ int main(){
 										printf("Te quedan %d puntos de vida\n",pers2.vida+5);
 									} else
 									{
-										printf("\n¡Enhorabuena, has conseguido salir!\n");
+										printf("\nÂ¡Enhorabuena, has conseguido salir!\n");
 										return 0;
 									}
 									pers1.survivalcoins-=100;
@@ -1213,8 +1213,8 @@ int main(){
 			if(pers1.vida!=0 && pers2.vida!=0 && respuesta1[5]=='a'&&cocina=='a')
 			{
 				printf("\n- %s %s -\n",pers1.nombrepers,pers2.nombrepers);
-				printf("\nAhora que estáis reunidos, queréis ir a la puerta principal");
-				printf("¡Enhorabuena, habéis salido! Echaré de menos estar acompañado.\n");
+				printf("\nAhora que estÃ¡is reunidos, querÃ©is ir a la puerta principal");
+				printf("Â¡Enhorabuena, habÃ©is salido! EcharÃ© de menos estar acompaÃ±ado.\n");
 			}
 			system("PAUSE");
 			
@@ -1224,7 +1224,7 @@ int main(){
 				do
 				{
 					printf("\n- %s -\n",pers1.nombrepers);
-					printf("\nDespués de estar buscando, has encontrado 6 ideas, tienes 3 oportunidades:\n1. La hora del reloj\n2. La fecha de la nota de detrás del reloj.\n3. El número que hay pintado en el cuadro que hay colgado.\n4. Los números que están arrancados del microondas.\n5. Los números que no están arrancados del microondas.\n6. La fecha que está señalada en el calendario.\n");
+					printf("\nDespuÃ©s de estar buscando, has encontrado 6 ideas, tienes 3 oportunidades:\n1. La hora del reloj\n2. La fecha de la nota de detrÃ¡s del reloj.\n3. El nÃºmero que hay pintado en el cuadro que hay colgado.\n4. Los nÃºmeros que estÃ¡n arrancados del microondas.\n5. Los nÃºmeros que no estÃ¡n arrancados del microondas.\n6. La fecha que estÃ¡ seÃ±alada en el calendario.\n");
 					fflush(stdin);
 					scanf("%d",&codigo);
 					oport++;
@@ -1232,14 +1232,14 @@ int main(){
 				
 				if(codigo==2 && pers2.vida!=0)
 				{
-					printf("Efectivamente la fecha en la que Alicia y yo nos conocimos era el código, lo puse porque desde el momento en el que nos vimos supe que jamás se me olvidaría ese día, fuimos tan felices...\nEn fin, que me pongo melancólico, ¡por fin has salido de la cocina! ¡Mira quién está ahí, %s! Ahora dirgíos a la puerta principal, ya es hora de terminar el TFG.\n",pers2.nombrepers);
+					printf("Efectivamente la fecha en la que Alicia y yo nos conocimos era el cÃ³digo, lo puse porque desde el momento en el que nos vimos supe que jamÃ¡s se me olvidarÃ­a ese dÃ­a, fuimos tan felices...\nEn fin, que me pongo melancÃ³lico, Â¡por fin has salido de la cocina! Â¡Mira quiÃ©n estÃ¡ ahÃ­, %s! Ahora dirgÃ­os a la puerta principal, ya es hora de terminar el TFG.\n",pers2.nombrepers);
 				} else if(codigo==2 && pers2.vida==0)
 				{
-					printf("Efectivamente la fecha en la que Alicia y yo nos conocimos era el código, lo puse porque desde el momento en el que nos vimos supe que jamás se me olvidaría ese día, fuimos tan felices...\nEn fin, que me pongo melancólico, ¡por fin has salido de la cocina! Ahora dirígete a la puerta principal, ya es hora de terminar el TFG.\n\n- FIN -\n");
+					printf("Efectivamente la fecha en la que Alicia y yo nos conocimos era el cÃ³digo, lo puse porque desde el momento en el que nos vimos supe que jamÃ¡s se me olvidarÃ­a ese dÃ­a, fuimos tan felices...\nEn fin, que me pongo melancÃ³lico, Â¡por fin has salido de la cocina! Ahora dirÃ­gete a la puerta principal, ya es hora de terminar el TFG.\n\n- FIN -\n");
 					return 0;
 				} else
 				{
-					printf("Ya quedaba poco, supongo que la presión te ha podido, has muerto.\n\n");
+					printf("Ya quedaba poco, supongo que la presiÃ³n te ha podido, has muerto.\n\n");
 					pers1.vida=0;
 				}
 				system("PAUSE");
@@ -1260,7 +1260,7 @@ void trivial (int* monedas)
 	
 	if(j == 1){
 	
-		printf("\n\n¿Cuál es el océano más grande del mundo?\n1.Pacífico\n2.Índico\n3.Atlántico\n4.Mediterráneo\n");
+		printf("\n\nÂ¿CuÃ¡l es el ocÃ©ano mÃ¡s grande del mundo?\n1.PacÃ­fico\n2.Ãndico\n3.AtlÃ¡ntico\n4.MediterrÃ¡neo\n");
 		scanf("%d", &respuesta);
 		if(respuesta == 1){
 			coins+=20;
@@ -1275,7 +1275,7 @@ void trivial (int* monedas)
 	
 	if(j == 2){
 	
-		printf("\n\n¿Cuál es la fórmula química del agua?\n1.CO2\n2.H3O\n3.H2O\n4.HH\n");
+		printf("\n\nÂ¿CuÃ¡l es la fÃ³rmula quÃ­mica del agua?\n1.CO2\n2.H3O\n3.H2O\n4.HH\n");
 		scanf("%d",&respuesta);
 		if(respuesta==3){
 			coins+=20;
@@ -1289,7 +1289,7 @@ void trivial (int* monedas)
 	
 	if(j == 3){
 	
-		printf("\n\n¿Cuándo se descubrió América?\n1.1942\n2.100\n3.1492\n4.1400\n");
+		printf("\n\nÂ¿CuÃ¡ndo se descubriÃ³ AmÃ©rica?\n1.1942\n2.100\n3.1492\n4.1400\n");
 		scanf("%d",&respuesta);
 		if(respuesta==3){
 			coins+=20;	
@@ -1303,7 +1303,7 @@ void trivial (int* monedas)
 	
 	if(j == 4){
 	
-		printf("\n\n¿Cómo se llama el proceso por el que se alimentan las plantas?\n1.Rumiar\n2.Fotosíntesis\n3.Comer\n4.Respirar\n");
+		printf("\n\nÂ¿CÃ³mo se llama el proceso por el que se alimentan las plantas?\n1.Rumiar\n2.FotosÃ­ntesis\n3.Comer\n4.Respirar\n");
 		scanf("%d",&respuesta);
 		if(respuesta==2){
 			coins+=20;
@@ -1317,7 +1317,7 @@ void trivial (int* monedas)
 	
 	if(j == 5){
 	
-		printf("\n\n¿En qué isla está situado el volcán del Teide?\n1.Tenerife\n2.Menorca\n3.La isla del perejil\n4.Las Palmas\n");
+		printf("\n\nÂ¿En quÃ© isla estÃ¡ situado el volcÃ¡n del Teide?\n1.Tenerife\n2.Menorca\n3.La isla del perejil\n4.Las Palmas\n");
 		scanf("%d",&respuesta);
 		if(respuesta==1){
 			coins+=20;
@@ -1331,7 +1331,7 @@ void trivial (int* monedas)
 	
 	if(j == 6){
 	
-		printf("\n\n¿Cuál es el libro sagrado del Islam?\n1.El mundo de la Fantasía\n2.Biblia\n3.Corán\n4.Felks\n");
+		printf("\n\nÂ¿CuÃ¡l es el libro sagrado del Islam?\n1.El mundo de la FantasÃ­a\n2.Biblia\n3.CorÃ¡n\n4.Felks\n");
 		scanf("%d", &respuesta);
 		if(respuesta == 3){
 			coins+=20;
@@ -1346,7 +1346,7 @@ void trivial (int* monedas)
 	
 	if(j == 7){
 	
-		printf("\n\n¿Qué rama de la Biología se encarga del estudio de los animales?\n1.Botánica\n2.Zoología\n3.Arquitectura\n4.Faunia\n");
+		printf("\n\nÂ¿QuÃ© rama de la BiologÃ­a se encarga del estudio de los animales?\n1.BotÃ¡nica\n2.ZoologÃ­a\n3.Arquitectura\n4.Faunia\n");
 		scanf("%d",&respuesta);
 		if(respuesta==1){
 			coins+=20;
@@ -1360,7 +1360,7 @@ void trivial (int* monedas)
 	
 	if(j == 8){
 	
-		printf("\n\n¿Quién es el autor de el Don Quijote de la Mancha?\n1.Gongora\n2.Dali\n3.Pinocho\n4.Miguel de Cervantes\n");
+		printf("\n\nÂ¿QuiÃ©n es el autor de el Don Quijote de la Mancha?\n1.Gongora\n2.Dali\n3.Pinocho\n4.Miguel de Cervantes\n");
 		scanf("%d",&respuesta);
 		if(respuesta==4){
 			coins+=20;	
@@ -1374,7 +1374,7 @@ void trivial (int* monedas)
 	
 	if(j == 9){
 	
-		printf("\n\n¿Cómo se llama el estadio del F.C. Barcelona?\n1.Calderon\n2.Camp Nou\n3.New Camp\n4.Barcelona Stadium\n");
+		printf("\n\nÂ¿CÃ³mo se llama el estadio del F.C. Barcelona?\n1.Calderon\n2.Camp Nou\n3.New Camp\n4.Barcelona Stadium\n");
 		scanf("%d",&respuesta);
 		if(respuesta==2){
 			coins+=20;
@@ -1388,7 +1388,7 @@ void trivial (int* monedas)
 	
 	if(j == 10){
 	
-		printf("\n\n¿Según la Biblia, quién traicionó a Jesús?\n1.Judas\n2.Moises\n3.Teresa de Calcuta\n4.Maoma\n");
+		printf("\n\nÂ¿SegÃºn la Biblia, quiÃ©n traicionÃ³ a JesÃºs?\n1.Judas\n2.Moises\n3.Teresa de Calcuta\n4.Maoma\n");
 		scanf("%d",&respuesta);
 		if(respuesta==1){
 			coins+=20;
@@ -1412,7 +1412,7 @@ char menu(){
 	printf("Survival Horror-Un juego para los mas valientes\n Bienvenido al menu de opciones:\n");
 	printf("Introduce la opcion que desees:\n");
 	printf("************************\n");
-	printf("I-iniciar sesión para una nueva partida\n");
+	printf("I-iniciar sesiÃ³n para una nueva partida\n");
 	printf("R-Registrarse\n");
 	printf("X-Intrucciones del juego\n");
 	printf("S-Salir del juego\n");
@@ -1426,7 +1426,7 @@ char menu(){
 void Instrucciones(char*informacion){
 	
 	printf("En SURVIVAL HORROR hay dos tipos de preguntas:\n El primer banco de preguntas es de cultura general las cuales serviran para ganar survival coins con las que mas adelante podras comprar pistas.\n El segundo banco de preguntas son de supervivencia, cada jugador iniciara con un 50 de vida y ganara o perdera en funcion de estas preguntas.\n");
-	printf("Para que el juego funcione debes crear un fichero usuario.txt en el que podrás comprobar los usuarios ya creados y crear tu perfil de jugador\n");
+	printf("Para que el juego funcione debes crear un fichero usuario.txt en el que podrÃ¡s comprobar los usuarios ya creados y crear tu perfil de jugador\n");
 	
 	do{
 		printf("Bienvenido al menu de instrucciones:\n");
@@ -1439,7 +1439,7 @@ void Instrucciones(char*informacion){
 		scanf("%c",&*informacion);
 		
 		if(*informacion=='A'){
-			printf("Se trata de preguntas de cultura general tipo trivial en las que tendrás 4 opciones para responde\n Si aciertas estas preguntas ganaras survivals coins que son las monedas existentes en nuestro juego y si no las aciertas las perderas");
+			printf("Se trata de preguntas de cultura general tipo trivial en las que tendrÃ¡s 4 opciones para responde\n Si aciertas estas preguntas ganaras survivals coins que son las monedas existentes en nuestro juego y si no las aciertas las perderas");
 		}else if(*informacion=='B'){
 			printf("Las monedas de nuestro juego se llaman survivalcoins y estas son las que marcaran el nivel de tu inteligencia respondiendo preguntas de cultura general\n");
 			
